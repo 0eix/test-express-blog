@@ -1,0 +1,17 @@
+{
+  "name": "test_express",
+  "version": "1.0.0",
+  "description": "test of express server",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "konaesan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  }
+}

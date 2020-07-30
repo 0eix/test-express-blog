@@ -1,0 +1,20 @@
+extends ../layout/default
+block content
+    .blog-header
+        .container
+            h1.blog-title My awesome Blog
+            p.lead.blog-description An example blog template built with Bootstrap.
+
+    .container
+        .row
+            .col.blog-main
+                each article in articles
+                    .blog-post
+                        h2.blog-post-title= article.title
+                        p.blog-post-meta
+                            | January 1, 2014 by #[a(href='#') Mark]
+                        p= article.body
+                        a(class="btn btn-outline-primary" href=`/articles/${article.id}` role="button") Read More
+                        hr
+                else
+                    li there is no post yet
