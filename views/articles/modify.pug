@@ -1,7 +1,7 @@
 extends ../layout/default
 block content
     .container
-        form(method="POST" action=`/articles/${article.id}`)
+        form(method="PUT" action=`/articles/${article.id}`)
             .form-group
                 label(for='title') Title
                 input#title.form-control(type='text' aria-describedby='titleHelp' name='title' value=article.title)
@@ -9,10 +9,10 @@ block content
 
             .form-group
                 label(for='body') Article content
-                textarea#body.form-control(rows='10' name='body')= article.title
+                textarea#body.form-control(rows='10' name='body')= article.body
 
             .form-row.justify-content-end
                 .col-auto
-                    button.btn.btn-secondary(type='submit' name='action' value='cancel') cancel
+                    a.btn.btn-secondary(href=`/articles/${article.id}/cancel`) cancel
                 .col-auto
-                    button.btn.btn-primary(type='submit' name='action' value='save') Save
+                    button.btn.btn-primary(type='submit') Save
